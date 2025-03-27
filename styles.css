@@ -238,6 +238,7 @@ h2 {
     height: 3.5rem; /* Ensure enough height for the label to float */
     padding-top: 1.5rem; /* Space for the label to move up */
     padding-bottom: 0.5rem;
+    transition: border-color 0.2s ease;
 }
 
 .form-floating-group .form-label {
@@ -245,12 +246,13 @@ h2 {
     top: 50%;
     left: 1rem;
     transform: translateY(-50%);
-    transition: all 0.2s ease;
+  
     pointer-events: none; /* Prevent label from interfering with input clicks */
     color: var(--gray);
     font-size: 0.95rem;
     background: #fff; /* To cover the border when floating */
     padding: 0 0.25rem; /* Small padding for better appearance */
+    transition: all 0.2s ease;
     font-family: var(--primary-font);
 }
 
@@ -262,7 +264,7 @@ h2 {
     transform: translateY(-50%);
     font-size: 0.85rem;
     color: var(--primary);
-   
+    transition: all 0.2s ease;
 }
 
 .form-floating-group .select2-container {
