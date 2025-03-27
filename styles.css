@@ -36,7 +36,7 @@ body {
 :root {
     --primary: #e23646;
     --primary-light: #e23646;
-    --primary-dark: #1d4ed8;
+    --primary-dark: #ed1b23;
     --secondary: #f59e0b;
     --light: #f8fafc;
     --dark: #1e293b;
@@ -60,8 +60,9 @@ body {
 
 .content-section {
     flex: 1;
-    padding: 2rem 3rem;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 1rem 2rem;
+    /* background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); */
+    background-color: var(--primary);
     color: white;
     overflow-y: auto;
     display: flex;
@@ -80,6 +81,17 @@ body {
 .content-wrapper {
     max-width: 600px;
     margin: auto;
+    width: 100%;
+}
+
+
+/* new css */
+.logo{
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.logo img{
     width: 100%;
 }
 
@@ -309,6 +321,19 @@ h2 {
 }
 
 
+/* copyright  */
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    padding-top: 1rem;
+    color: var(--gray); /* Use a gray color to match the form section's aesthetic */
+    font-family: var(--primary-font);
+}
+
+.copyright p {
+    margin: 0; /* Remove default paragraph margin */
+}
+
 
 @media (max-width: 992px) {
     .main-container {
@@ -409,6 +434,11 @@ h2 {
 
     .form-floating-group .select2-container--default .select2-selection--single .select2-selection__arrow {
         right: 0.75rem;
+    }
+
+    .logo{
+        margin: auto;
+      
     }
 
 
