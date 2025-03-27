@@ -1,0 +1,425 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:var(--primary-font);
+    background-color: #f1f5f9;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+@font-face {
+    font-family: 'poppins-bold';
+    src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat-black';
+    src: url('./assets/fonts/Montserrat-Black.ttf') format('truetype');
+}
+
+
+:root {
+    --primary: #e23646;
+    --primary-light: #e23646;
+    --primary-dark: #1d4ed8;
+    --secondary: #f59e0b;
+    --light: #f8fafc;
+    --dark: #1e293b;
+    --gray: #64748b;
+    --light-gray: #e2e8f0;
+    --primary-dark-2: #c22e3b;
+
+    --primary-font : "montserrat", sans-serif;
+    --primary-bold-font : "montserrat-bold", sans-serif;
+    --primary-black-font : "montserrat-black", sans-serif;
+    --bold-font : "poppins-bold", sans-serif;
+}
+
+
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.content-section {
+    flex: 1;
+    padding: 2rem 3rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section {
+    flex: 1;
+    padding: 2rem 3rem;
+    overflow-y: auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    max-width: 600px;
+    margin: auto;
+    width: 100%;
+}
+
+h2 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 2.3rem;
+    /* font-family: var(--bold-font); */
+    font-family: var(--primary-black-font);
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary);
+    margin-top: 1rem;
+    border-radius: 2px;
+}
+
+.highlight-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--secondary);
+}
+
+.highlight-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.highlight-icon {
+    background: var(--secondary);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.form-title {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.93rem;
+    /* letter-spacing: 0.8px; */
+    font-family: var(--primary-black-font);
+    /* font-weight: 900; */
+
+    
+}
+
+.form-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+.form-control, .form-select, .select2-selection {
+    border: 1px solid var(--light-gray);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+.btn-submit {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.875rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    width: 100%;
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    background: var(--primary-dark-2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.select2-container--default .select2-selection--single {
+    height: auto;
+    padding: 0.5rem 1rem;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+}
+
+.select2-dropdown {
+    border: 1px solid var(--light-gray);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 26px;
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    width: 20px;
+}
+
+
+/* form section */
+
+/* Add this to your existing styles.css */
+.form-floating-group {
+    position: relative;
+    margin-bottom: 1.5rem; /* Adjust spacing */
+}
+
+.form-floating-group .form-control,
+.form-floating-group .form-select {
+    height: 3.5rem; /* Ensure enough height for the label to float */
+    padding-top: 1.5rem; /* Space for the label to move up */
+    padding-bottom: 0.5rem;
+}
+
+.form-floating-group .form-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    transition: all 0.2s ease;
+    pointer-events: none; /* Prevent label from interfering with input clicks */
+    color: var(--gray);
+    font-size: 0.95rem;
+    background: #fff; /* To cover the border when floating */
+    padding: 0 0.25rem; /* Small padding for better appearance */
+    font-family: var(--primary-font);
+}
+
+.form-floating-group .form-control:focus + .form-label,
+.form-floating-group .form-control:not(:placeholder-shown) + .form-label,
+.form-floating-group .form-select:focus + .form-label,
+.form-floating-group .form-select:not(:placeholder-shown) + .form-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    color: var(--primary);
+   
+}
+
+.form-floating-group .select2-container {
+    width: 100% !important; /* Force full width */
+    max-width: 100%; /* Prevent overflow */
+}
+
+/* Style the Select2 selection to match other inputs */
+.form-floating-group .select2-selection--single {
+    height: 3.5rem !important; /* Match input height */
+    padding-top: 1.5rem !important; /* Space for floating label */
+    padding-bottom: 0.5rem !important;
+    border: 1px solid var(--light-gray);
+    border-radius: 0.5rem;
+    box-sizing: border-box; /* Include padding/border in width */
+}
+
+/* Align text within Select2 */
+.form-floating-group .select2-selection__rendered {
+    line-height: 1.5rem !important;
+    padding-left: 1rem !important; /* Match input padding */
+    color: var(--dark);
+}
+
+/* Position the arrow */
+.form-floating-group .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 26px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    width: 20px;
+}
+
+/* Floating label behavior for Select2 */
+.form-floating-group .select2-container--focus + .form-label,
+.form-floating-group .select2-container--open + .form-label,
+.form-floating-group .select2-selection--single:not(.select2-selection--single:empty) + .form-label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.85rem;
+    color: var(--primary);
+}
+
+
+
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .content-section, .form-section {
+        padding: 2rem;
+        flex: none;
+        height: auto;
+    }
+    
+    .content-wrapper, .form-container {
+        max-width: 100%;
+    }
+
+    .form-floating-group .select2-selection--single {
+        height: 3rem !important;
+        padding-top: 1.25rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-section, .form-section {
+        padding: 1rem 1.2rem;
+    }
+
+    h2, .form-title {
+        /* font-size: clamp(1.2rem, 4vw, 2.5rem); */
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+
+
+
+    .content-section h2::after, .form-title::after {
+        width: 40px;
+        height: 3px;
+        margin-top: 0.75rem;
+    }
+
+    .form-floating-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-floating-group .form-control {
+        /* height: 2.75rem; */
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .form-floating-group .form-label {
+        font-size: 0.9rem;
+        left: 0.75rem;
+    }
+
+    .form-floating-group .form-control:focus + .form-label,
+    .form-floating-group .form-control:not(:placeholder-shown) + .form-label {
+        font-size: 0.75rem;
+    }
+
+    .btn-submit {
+        padding: 0.75rem;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 2.75rem;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .select2-container--default .select2-selection__arrow {
+        top: 50%;
+        right: 0.75rem;
+    }
+
+    .select2-dropdown {
+        font-size: 0.9rem;
+    }
+
+
+
+    .form-floating-group .select2-selection--single {
+        height: 2.75rem !important;
+        padding-top: 1rem !important;
+        padding-bottom: 0.5rem !important;
+        font-size: 0.9rem;
+    }
+
+    .form-floating-group .select2-selection__rendered {
+        padding-left: 0.75rem !important;
+    }
+
+    .form-floating-group .select2-container--default .select2-selection--single .select2-selection__arrow {
+        right: 0.75rem;
+    }
+
+
+}
+
+
+@media (max-width: 400px){
+    h2, .form-title {
+        /* font-size: clamp(1.2rem, 4vw, 2.5rem); */
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+   
+
+}
